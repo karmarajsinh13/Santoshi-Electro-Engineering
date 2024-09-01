@@ -303,8 +303,8 @@ export default function Home() {
       <div className="container-xxl py-5">
         <div className="container py-5">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s" style={{visibility: 'visible', animationDelay: '0.1s', animationName: 'fadeInUp'}}>
-            <h6 className="text-secondary text-uppercase">Our Services</h6>
-            <h1 className="mb-5">Explore Our Services</h1>
+            <h6 className="text-secondary text-uppercase">Our Products</h6>
+            <h1 className="mb-5">Explore Our Products</h1>
           </div>
           <div className="row g-4">
             <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s" style={{visibility: 'visible', animationDelay: '0.3s', animationName: 'fadeInUp'}}>

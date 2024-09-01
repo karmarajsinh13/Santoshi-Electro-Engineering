@@ -23,7 +23,7 @@ export default function View_product() {
       >
         <div className="container py-5">
           <h1 className="display-3 text-white mb-3 animated slideInDown">
-            About Us
+           {"product_name"}
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb">
@@ -34,14 +34,14 @@ export default function View_product() {
               </li>
               <li className="breadcrumb-item">
                 <a className="text-white" href="#">
-                  Pages
+                 Products
                 </a>
               </li>
               <li
                 className="breadcrumb-item text-white active"
                 aria-current="page"
               >
-                About
+                Details
               </li>
             </ol>
           </nav>
