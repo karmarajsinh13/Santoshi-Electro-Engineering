@@ -5,7 +5,7 @@ import service3 from "./img/service-3.jpg"
 import service4 from "./img/service-4.jpg"
 import service5 from "./img/service-5.jpg"
 import service6 from "./img/service-6.jpg"
-import carousel1 from "./img/carousel-1.jpg"
+import bg2banner from "./img/bg2banner.jpg"
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
             >
               <div className="owl-item cloned" style={{ width: "1519.2px" }}>
                 <div className="owl-carousel-item position-relative">
-                  <img className="img-fluid" src={carousel1} alt="" />
+                  <img className="img-fluid" src={bg2banner} alt="" />
                   <div
                     className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style={{ background: "rgba(6, 3, 21, .5)" }}
@@ -124,7 +124,7 @@ export default function Home() {
               </div>
               <div className="owl-item active" style={{ width: "1519.2px" }}>
                 <div className="owl-carousel-item position-relative">
-                  <img className="img-fluid" src={carousel1} alt="" />
+                  <img className="img-fluid" src={bg2banner} alt="" />
                   <div
                     className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style={{ background: "rgba(6, 3, 21, .5)" }}
@@ -206,7 +206,7 @@ export default function Home() {
               </div>
               <div className="owl-item cloned" style={{ width: "1519.2px" }}>
                 <div className="owl-carousel-item position-relative">
-                  <img className="img-fluid" src={carousel1} alt="" />
+                  <img className="img-fluid" src={bg2banner} alt="" />
                   <div
                     className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style={{ background: "rgba(6, 3, 21, .5)" }}

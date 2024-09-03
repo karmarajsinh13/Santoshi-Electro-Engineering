@@ -6,6 +6,7 @@ import service4 from "./img/service-4.jpg"
 import service5 from "./img/service-5.jpg"
 import service6 from "./img/service-6.jpg"
 import carousel1 from "./img/carousel-1.jpg"
+import banner from "./img/banner.jpg"
 import { Link } from 'react-router-dom'
 
 
@@ -23,7 +24,7 @@ export default function Products() {
     {/* Page Header Start */}
     <div className="container-fluid page-header py-5" style={{marginBottom: '6rem'}}>
       <div className="container py-5">
-        <h1 className="display-3 text-white mb-3 animated slideInDown">Services</h1>
+        <h1 className="display-3 text-white mb-3 animated slideInDown">Products</h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol className="breadcrumb">
             <li className="breadcrumb-item"><a className="text-white" href="#">Home</a></li>
