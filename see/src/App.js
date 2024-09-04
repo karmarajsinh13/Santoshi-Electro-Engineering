@@ -5,6 +5,9 @@ import Header from "./Components/Header";
 import About from "./Components/About";
 import Products from "./Components/Products";
 import View_product from "./Components/View_product";
+import Contactus from "./Components/Contactus";
+import Gallery from "./Components/Gallery";
+import Clints from "./Components/Clints";
 
 function App() {
   const Layout = () => {
@@ -35,6 +38,17 @@ function App() {
         },  {
           path: "/View_product",
           element: <View_product></View_product>,
+        }, {
+          path: "/Contactus",
+          element: <Contactus></Contactus>,
+        }, 
+        {
+          path: "/Gallery",
+          element: <Gallery></Gallery>,
+        },
+        {
+          path: "/Clints",
+          element: <Clints></Clints>,
         },
 
 

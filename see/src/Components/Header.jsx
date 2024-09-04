@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div>
-          <nav className="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+      <nav className="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
         <a
           href="index.html"
           className="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5"
@@ -24,11 +24,22 @@ export default function Header() {
             <Link to="/" className="nav-item nav-link active">
               Home
             </Link>
+            <Link to="/Products" className="nav-item nav-link">
+              Products
+            </Link>
+            <Link to="/Clints" className="nav-item nav-link ">
+              Clints
+            </Link>
+            <Link to="/Gallery" className="nav-item nav-link ">
+              Gallery
+            </Link>
+
             <Link to="/About" className="nav-item nav-link">
               About
             </Link>
-            <Link to="/Products" className="nav-item nav-link">
-            Products
+
+            <Link to="/Contactus" className="nav-item nav-link">
+              Contact Us
             </Link>
             <div className="nav-item dropdown">
               <a
@@ -59,16 +70,13 @@ export default function Header() {
                 </a>
               </div>
             </div>
-            <a href="contact.html" className="nav-item nav-link">
-              Contact
-            </a>
           </div>
-          <h4 className="m-0 pe-lg-5 d-none d-lg-block">
+          {/* <h4 className="m-0 pe-lg-5 d-none d-lg-block">
             <i className="fa fa-headphones text-primary me-3" />
             +91 9825797917
-          </h4>
+          </h4> */}
         </div>
       </nav>
     </div>
-  )
+  );
 }
