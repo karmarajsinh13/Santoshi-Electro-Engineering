@@ -4,8 +4,8 @@ export default function Contactus() {
   return (
     <div>
       <div>
-        <div className="container-fluid page-header py-5" style={{marginBottom: '6rem'}}>
-          <div className="container py-5">
+        <div className="container-fluid page-header py-5">
+          <div className="container py-10">
             <h1 className="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
             <nav aria-label="breadcrumb animated slideInDown">
               <ol className="breadcrumb">
@@ -16,8 +16,8 @@ export default function Contactus() {
             </nav>
           </div>
         </div>
-        {}
-        {}
+        
+        
         <div className="container-fluid overflow-hidden py-5 px-lg-0">
           <div className="container contact-page py-5 px-lg-0">
             <div className="row g-5 mx-lg-0">

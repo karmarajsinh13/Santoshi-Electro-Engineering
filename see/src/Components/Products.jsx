@@ -22,8 +22,8 @@ export default function Products() {
     {/* Spinner End */}
  
     {/* Page Header Start */}
-    <div className="container-fluid page-header py-5" style={{marginBottom: '6rem'}}>
-      <div className="container py-5">
+    <div className="container-fluid page-header py-5" >
+      <div className="container py-10">
         <h1 className="display-3 text-white mb-3 animated slideInDown">Products</h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol className="breadcrumb">
