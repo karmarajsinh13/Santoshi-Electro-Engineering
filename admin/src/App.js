@@ -4,6 +4,8 @@ import Home from "./Components/Home";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Sidebar from "./Components/Sidebar";
+import Gallery from "./Components/Gallery";
+import Add_gallery from "./Components/Add_gallery";
 
 
 function App() {
@@ -27,6 +29,19 @@ function App() {
           path: "/",
           element: <Home></Home>,
         },
+        {
+          path: "/Gallery",
+          element: <Gallery></Gallery>,
+        },
+        {
+          path: "/Add_gallery",
+          element: <Add_gallery></Add_gallery>,
+        },
+        {
+          path: "/Add_gallery/:id",
+          element: <Add_gallery></Add_gallery>,
+        },
+
        
 
       ],
