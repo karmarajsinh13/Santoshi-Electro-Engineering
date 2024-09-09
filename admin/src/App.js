@@ -41,7 +41,7 @@ function App() {
           path: "/Add_gallery/:id",
           element: <Add_gallery></Add_gallery>,
         },
-
+        
        
 
       ],
