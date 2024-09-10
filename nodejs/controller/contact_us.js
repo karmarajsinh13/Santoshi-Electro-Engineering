@@ -38,7 +38,7 @@ export const deleteContact = (req, res) => {
 
 export const insertContact = (req, res) => {
   const query =
-    "INSERT INTO contact(`firstname`,`lastname`,`email`,`phone`,`msg`,`entry_date`,`status`) values(?)";
+    "INSERT INTO contact(`firstname`,`lastname`,`email`,`phone`,`msg`,`entry_date`) values(?)";
   const date = new Date();
   const values = [
     req.body.firstname,
@@ -47,7 +47,7 @@ export const insertContact = (req, res) => {
     req.body.phone,
     req.body.msg,
     date,
-    req.body.status,
+ 
   ];
   console.log(query);
   console.log(values);
@@ -58,7 +58,7 @@ export const insertContact = (req, res) => {
 };
 export const updateContact = (req, res) => {
   const query =
-    "UPDATE `contact` SET `firstname`=? ,`lastname`=?, `email`=?,`phone`=?, `msg`=? ,`entry_date`=?,`status`=? where id=?";
+    "UPDATE `contact` SET `firstname`=? ,`lastname`=?, `email`=?,`phone`=?, `msg`=? ,`entry_date`=? where id=?";
   const values = [
     req.body.firstname,
     req.body.lastname,
@@ -66,7 +66,7 @@ export const updateContact = (req, res) => {
     req.body.phone,
     req.body.msg,
     new Date(),
-    req.body.status,
+
   ];
   console.log(query);
   db.query(query, [...values, req.params.id], (err, data) => {
