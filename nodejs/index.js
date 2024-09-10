@@ -3,6 +3,7 @@ import cors from "cors";
 import router1 from "./models/r_admin.js";
 import router2 from "./models/r_gallery.js";
 import router3 from "./models/r_contact_us.js";
+import router4 from "./models/r_clients.js";
 
 
 const app = express();
@@ -14,8 +15,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/see/admin", router1);
 app.use("/see/gallery", router2);
 app.use("/see/contact_us", router3);
-
-
+app.use("/see/clients", router4);
 
 
 app.listen(8080, () => {

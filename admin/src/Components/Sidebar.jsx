@@ -36,8 +36,8 @@ export default function Sidebar() {
           icon: <RiGalleryLine size={20} color="#FB8340" />,
         },
         {
-          path: "/Event",
-          name: "Event",
+          path: "/Clients",
+          name: "Clients",
           icon: <PiSmileyBold size={20} color="#FB8340" />,
         },
         {

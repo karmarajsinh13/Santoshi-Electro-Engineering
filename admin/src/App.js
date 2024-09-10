@@ -6,6 +6,8 @@ import Footer from "./Components/Footer";
 import Sidebar from "./Components/Sidebar";
 import Gallery from "./Components/Gallery";
 import Add_gallery from "./Components/Add_gallery";
+import Add_clients from "./Components/Add_clients";
+import Clients from "./Components/Clients";
 
 
 function App() {
@@ -41,6 +43,19 @@ function App() {
           path: "/Add_gallery/:id",
           element: <Add_gallery></Add_gallery>,
         },
+        {
+          path: "/Clients",
+          element: <Clients></Clients>,
+        },
+        {
+          path: "/Add_clients",
+          element: <Add_clients></Add_clients>,
+        },
+        {
+          path: "/Add_clients/:id",
+          element: <Add_clients></Add_clients>,
+        },
+
         
        
 
