@@ -8,8 +8,42 @@ import service6 from "./img/service-6.jpg";
 import carousel1 from "./img/carousel-1.jpg";
 import banner from "./img/banner.jpg";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function Clints() {
+  const [clients, setclients] = useState([]);
+  // const [Totalimages, setTotalimages] = useState([]);
+
+  useEffect(() => {
+    getclients();
+    // getTotalimages();
+  }, []);
+  // const getTotalimages = async () => {
+  //   try {
+  //     const res = await axios.get("http://localhost:8080/see/clients");
+  //     setclients(res.data);
+
+  //     setTotalimages(res.data.length);
+  //     console.log(res.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  const getclients = async () => {
+    const res = await axios.get("http://localhost:8080/see/clients");
+    setclients(res.data);
+    console.log(res.data);
+  };
+  const deleteclients = async (id) => {
+    let ans = window.confirm("are you sure?");
+    if (ans) {
+      const res = await axios.delete("http://localhost:8080/see/clients/" + id);
+      console.log(res.data);
+      alert(res.data);
+      getclients();
+    }
+  };
   return (
     <div>
       {/* Spinner Start */}
@@ -55,8 +89,10 @@ export default function Clints() {
           </nav>
         </div>
       </div>
+
       {/* Page Header End */}
       {/* Service Start */}
+
       <div className="container-xxl py-5">
         <div className="container py-5">
           <div
@@ -72,23 +108,30 @@ export default function Clints() {
             <h1 className="mb-5">Our Clints</h1>
           </div>
           <div className="row g-4">
-            <div
-              className="col-md-6 col-lg-4 wow fadeInUp"
-              data-wow-delay="0.3s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.3s",
-                animationName: "fadeInUp",
-              }}
-            >
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service} alt="" />
+            {clients.map((clients) => (
+              <div
+                className="col-md-6 col-lg-4 wow fadeInUp"
+                data-wow-delay="0.3s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.3s",
+                  animationName: "fadeInUp",
+                }}
+              >
+                <div className="service-item p-4">
+                  <div className="overflow-hidden mb-4">
+                    <img
+                      className="img-fluid"
+                      src={`http://localhost:8080/uploads/${clients.img}`}
+                      alt=""
+                      style={{ width: "400px", height: "200px" }}
+                    />
+                  </div>
+                  <h4 className="mb-3">{clients.client_name} </h4>
                 </div>
-                <h4 className="mb-3">Air Freight</h4>
               </div>
-            </div>
-            <div
+            ))}
+            {/* <div
               className="col-md-6 col-lg-4 wow fadeInUp"
               data-wow-delay="0.5s"
               style={{
@@ -119,7 +162,7 @@ export default function Clints() {
                 </div>
                   <h4 className="mb-3">Air Freight</h4>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

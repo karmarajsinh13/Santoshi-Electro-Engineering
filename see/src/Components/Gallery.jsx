@@ -8,8 +8,44 @@ import service6 from "./img/service-6.jpg";
 import carousel1 from "./img/carousel-1.jpg";
 import banner from "./img/banner.jpg";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function Gallery() {
+  const [gallery, setgallery] = useState([]);
+  // const [Totalimages, setTotalimages] = useState([]);
+
+  useEffect(() => {
+    getgallery();
+    // getTotalimages();
+  }, []);
+  // const getTotalimages = async () => {
+  //   try {
+  //     const res = await axios.get("http://localhost:8080/see/gallery");
+  //     setgallery(res.data);
+  
+  //     setTotalimages(res.data.length);
+  //     console.log(res.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  const getgallery = async () => {
+    const res = await axios.get("http://localhost:8080/see/gallery");
+    setgallery(res.data);
+    console.log(res.data);
+  };
+  const deletegallery = async (id) => {
+    let ans = window.confirm("are you sure?");
+    if (ans) {
+      const res = await axios.delete(
+        "http://localhost:8080/see/gallery/" + id
+      );
+      console.log(res.data);
+      alert(res.data);
+      getgallery();
+    }
+  };
   return (
     <div>
       {/* Spinner Start */}
