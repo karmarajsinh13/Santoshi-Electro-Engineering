@@ -8,7 +8,7 @@ import {
   AiOutlineProfile,
 } from "react-icons/ai";
 import { CiUser } from "react-icons/ci";
-import { RiGalleryLine, RiUser2Fill, RiUser3Fill, RiUser3Line } from "react-icons/ri";
+import { RiBox3Line, RiGalleryLine, RiTeamLine, RiUser2Fill, RiUser3Fill, RiUser3Line } from "react-icons/ri";
 import {
   PiBuildings,
   PiContactlessPaymentBold,
@@ -26,9 +26,9 @@ export default function Sidebar() {
           icon: <IoHomeOutline size={20} color="#FB8340" />,
         },
         {
-          path: "/Users",
-          name: "Users",
-          icon: <RiUser3Line size={20} color="#FB8340" />,
+          path: "/Products",
+          name: "Products",
+          icon: <RiBox3Line size={20} color="#FB8340" />,
         },
         {
           path: "/Gallery",
@@ -38,23 +38,24 @@ export default function Sidebar() {
         {
           path: "/Clients",
           name: "Clients",
-          icon: <PiSmileyBold size={20} color="#FB8340" />,
-        },
-        {
-          path: "/Viewparticipate",
-          name: "Viewparticipate",
-          icon: <PiSmileyBold size={20} color="#FB8340" />,
-        },
-        {
-          path: "/Job",
-          name: "Job",
-          icon: <AiOutlineLaptop size={20} color="#FB8340" />,
+          icon: <RiTeamLine size={20} color="#FB8340" />,
         },
         {
           path: "/Contact_us",
           name: "Contact",
           icon: <PiContactlessPaymentBold size={20} color="#FB8340" />,
         },
+        // {
+        //   path: "/Viewparticipate",
+        //   name: "Viewparticipate",
+        //   icon: <PiSmileyBold size={20} color="#FB8340" />,
+        // },
+        // {
+        //   path: "/Job",
+        //   name: "Job",
+        //   icon: <AiOutlineLaptop size={20} color="#FB8340" />,
+        // },
+   
       ];
   return (
     <>
