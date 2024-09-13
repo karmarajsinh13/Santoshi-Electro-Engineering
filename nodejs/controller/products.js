@@ -27,7 +27,7 @@ export const Totalproduct = (req, res) => {
 
 
 export const getproduct = (req, res) => {
-  const query = "select * from products where id=";
+  const query = "select * from products where id=?";
 
   db.query(query, [req.params.id], (err, data) => {
     if (err) return res.json(err);

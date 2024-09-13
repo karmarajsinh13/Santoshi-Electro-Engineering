@@ -35,7 +35,7 @@ export default function Products() {
       <div class="col-12">
         <div class="card mb-4">
           <div class="card-header pb-0">
-            <h2>productss</h2>
+            <h2>Products</h2>
             <li class="nav-item d-flex align-items-center">
               <Link
                 class="btn btn-outline-primary btn-sm mb-0 me-3"
@@ -139,7 +139,7 @@ export default function Products() {
                           className="btn btn-xs btn-info edit_gallery"
                           type="button"
                         >
-                          <Link to={`/Viewproducts/` + products.id}>
+                          <Link to={`/Viewproduct/` + products.id}>
                             View All
                           </Link>
                         </button>

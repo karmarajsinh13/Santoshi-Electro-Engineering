@@ -10,6 +10,7 @@ import Add_clients from "./Components/Add_clients";
 import Clients from "./Components/Clients";
 import Products from "./Components/Products";
 import Add_product from "./Components/Add_product";
+import Viewproduct from "./Components/Viewproduct";
 
 
 function App() {
@@ -68,6 +69,14 @@ function App() {
         {
           path: "/Add_product/:id",
           element: <Add_product></Add_product>,
+        },
+        {
+          path: "/Viewproduct",
+          element: <Viewproduct></Viewproduct>,
+        },
+        {
+          path: "/Viewproduct/:id",
+          element: <Viewproduct></Viewproduct>,
         },
 
         
