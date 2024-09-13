@@ -8,6 +8,8 @@ import Gallery from "./Components/Gallery";
 import Add_gallery from "./Components/Add_gallery";
 import Add_clients from "./Components/Add_clients";
 import Clients from "./Components/Clients";
+import Products from "./Components/Products";
+import Add_product from "./Components/Add_product";
 
 
 function App() {
@@ -54,6 +56,18 @@ function App() {
         {
           path: "/Add_clients/:id",
           element: <Add_clients></Add_clients>,
+        },
+        {
+          path: "/Products",
+          element: <Products></Products>,
+        },
+        {
+          path: "/Add_product",
+          element: <Add_product></Add_product>,
+        },
+        {
+          path: "/Add_product/:id",
+          element: <Add_product></Add_product>,
         },
 
         
