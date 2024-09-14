@@ -8,6 +8,7 @@ import View_product from "./Components/View_product";
 import Contactus from "./Components/Contactus";
 import Gallery from "./Components/Gallery";
 import Clints from "./Components/Clints";
+import Viewgallery from "./Components/Viewgallery";
 
 function App() {
   const Layout = () => {
@@ -49,6 +50,14 @@ function App() {
         {
           path: "/Clints",
           element: <Clints></Clints>,
+        },
+        {
+          path: "/Viewgallery",
+          element: <Viewgallery></Viewgallery>,
+        },
+        {
+          path: "/Viewgallery/:id",
+          element: <Viewgallery></Viewgallery>,
         },
 
 

@@ -168,7 +168,7 @@ export default function Gallery() {
                 <a className="btn-slide mt-2" href>
                   <i className="fa fa-arrow-right" />
                   <span>
-                    <Link to="/View_product">View</Link>
+                    <Link to="/Viewgallery">View</Link>
                   </span>
                 </a>
               </div>
