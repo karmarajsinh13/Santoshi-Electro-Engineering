@@ -53,7 +53,7 @@ export const insertContact = (req, res) => {
   console.log(values);
   db.query(query, [values], (err, data) => {
     if (err) return res.json(err);
-    return res.json("New contact has been added");
+    return res.json("Your Message Has Been Sumbited !");
   });
 };
 export const updateContact = (req, res) => {

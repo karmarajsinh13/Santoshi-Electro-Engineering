@@ -1,6 +1,43 @@
-import React from 'react'
-import Footer from './Footer'
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import axios from "axios";
+import { useEffect, useState } from "react";
 export default function Home() {
+  const [totalProducts, setTotalProducts] = useState(0);
+  const [Upcomingevent, setUpcomingevent] = useState(0);
+  const [Totalimages, setTotalimages] = useState(0);
+  const [Totaljob, setTotaljob] = useState([]);
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    getTotalProducts();
+ 
+  }, []);
+
+ 
+  const getTotalimages = async () => {
+    try {
+      const res = await axios.get("http://localhost:8080/see/gallerys");
+ 
+  
+      setTotalimages(res.data.length);
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getTotalProducts = async () => {
+    try {
+      const res = await axios.get("http://localhost:8080/see/products");
+      setProduct(res.data);
+      setTotalProducts(res.data.length);
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div style={{ marginLeft: "270px", marginTop: "50px" }}>
     <main class="main-content position-relative border-radius-lg ">
@@ -15,13 +52,13 @@ export default function Home() {
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                        Total Alumnis
+                        Total Products
                       </p>
                       <h5
                         class="font-weight-bolder"
                         style={{ fontSize: "35px" }}
                       >
-                        {/* {totalUsers} */}6
+                        {totalProducts}
                       </h5>
                       <p class="mb-0">
                         <span class="text-success text-sm font-weight-bolder">
@@ -50,7 +87,7 @@ export default function Home() {
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                        Upcoming Events
+                        Clients
                       </p>
                       <h5
                         class="font-weight-bolder"
@@ -86,7 +123,7 @@ export default function Home() {
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                        Total Gallerys
+                        Total Images
                       </p>
                       <h5
                         class="font-weight-bolder"
@@ -121,7 +158,7 @@ export default function Home() {
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">
-                       Total Jobs
+                       Total Inquires
                       </p>
                       <h5
                         class="font-weight-bolder"
@@ -150,7 +187,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+{/* 
         <div class="row mt-4">
           <div class="col-lg-7 mb-lg-0 mb-4">
             <div class="card z-index-2 h-100 ">
@@ -176,7 +213,7 @@ export default function Home() {
                       <td >
                         <td>
                           <img
-                            src="http://localhost:3000/uploads/karmarajsinh.jpg1712504920235"
+                            src="http://localhost:8080/uploads/karmarajsinh.jpg1712504920235"
                             className="avatar avatar-sm me-3"
                             alt="Country flag"
                             style={{ height: "50px", width: "50px", marginLeft: "10px" }}
@@ -213,7 +250,7 @@ export default function Home() {
                       <td >
                         <td>
                           <img
-                            src="http://localhost:3000/uploads/vrundesh.jpg1712866678419"
+                            src="http://localhost:8080/uploads/vrundesh.jpg1712866678419"
                             className="avatar avatar-sm me-3"
                             alt="Country flag"
                             style={{ height: "50px", width: "50px", marginLeft: "10px" }}
@@ -250,7 +287,7 @@ export default function Home() {
                       <td >
                         <td>
                           <img
-                            src="http://localhost:3000/uploads/kuldipsinh.jpg1713038908252"
+                            src="http://localhost:8080/uploads/kuldipsinh.jpg1713038908252"
                             className="avatar avatar-sm me-3"
                             alt="Country flag"
                             style={{ height: "50px", width: "50px", marginLeft: "10px" }}
@@ -287,7 +324,7 @@ export default function Home() {
                       <td >
                         <td>
                           <img
-                            src="http://localhost:3000/uploads/PHD.jpeg1713623941852"
+                            src="http://localhost:8080/uploads/PHD.jpeg1713623941852"
                             className="avatar avatar-sm me-3"
                             alt="Country flag"
                             style={{ height: "50px", width: "50px", marginLeft: "10px" }}
@@ -324,7 +361,7 @@ export default function Home() {
                       <td >
                         <td>
                           <img
-                            src="http://localhost:3000/uploads/zala.jpg1713968749889"
+                            src="http://localhost:8080/uploads/zala.jpg1713968749889"
                             className="avatar avatar-sm me-3"
                             alt="Country flag"
                             style={{ height: "50px", width: "50px", marginLeft: "10px" }}
@@ -455,7 +492,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div class="row mt-4">
       

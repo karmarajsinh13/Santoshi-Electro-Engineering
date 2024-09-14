@@ -11,6 +11,9 @@ import Clients from "./Components/Clients";
 import Products from "./Components/Products";
 import Add_product from "./Components/Add_product";
 import Viewproduct from "./Components/Viewproduct";
+import Contactus from "./Components/Contactus";
+import Viewgallery from "./Components/Viewgallery";
+import Viewclient from "./Components/Viewclient";
 
 
 function App() {
@@ -78,8 +81,30 @@ function App() {
           path: "/Viewproduct/:id",
           element: <Viewproduct></Viewproduct>,
         },
-
-        
+        {
+          path: "/Contactus",
+          element: <Contactus></Contactus>,
+        },
+        {
+          path: "/Contactus/:id",
+          element: <Contactus></Contactus>,
+        },
+        {
+          path: "/Viewgallery",
+          element: <Viewgallery></Viewgallery>,
+        },
+        {
+          path: "/Viewgallery/:id",
+          element: <Viewgallery></Viewgallery>,
+        },
+        {
+          path: "/Viewclient",
+          element: <Viewclient></Viewclient>,
+        },
+        {
+          path: "/Viewclient/:id",
+          element: <Viewclient></Viewclient>,
+        },
        
 
       ],

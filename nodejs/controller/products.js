@@ -43,6 +43,17 @@ export const deleteproduct = (req, res) => {
   });
 };
 
+export const TotalProducts = (req, res) => {
+  const query1 = "SELECT count(*) FROM products where status=1";
+  db.query(query1, (err, data) => {
+    if (err) {
+      return res.json(err);
+    } else {
+      return res.json(data);
+    }
+  });
+};
+
 export const insertproduct = (req, res) => {
   const query =
     "INSERT INTO products(`img`,`name`,`details`,`entry_date`,`entry_by`,`status`) values(?)";

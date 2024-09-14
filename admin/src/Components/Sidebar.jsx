@@ -41,7 +41,7 @@ export default function Sidebar() {
           icon: <RiTeamLine size={20} color="#FB8340" />,
         },
         {
-          path: "/Contact_us",
+          path: "/Contactus",
           name: "Contact",
           icon: <PiContactlessPaymentBold size={20} color="#FB8340" />,
         },

@@ -114,7 +114,7 @@ export default function Clients() {
                               type="button"
 
                             >
-                              <Link to={`/All_clients/` + clients.id}>View</Link>
+                              <Link to={`/Viewclient/` + clients.id}>View</Link>
                             </button>
                             &nbsp;&nbsp;
                             <button

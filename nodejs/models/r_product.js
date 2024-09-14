@@ -5,7 +5,7 @@ import {
   getproducts,
   insertproduct,
   updateproduct,
-  Totalproduct,
+  TotalProducts,
 
 } from "../controller/products.js";
 import multer from "multer";
@@ -24,7 +24,7 @@ const upload = multer({ storage: storage });
 const router5 = express.Router();
 
 router5.get("/", getproducts);
-router5.get("/", Totalproduct);
+router5.get("/", TotalProducts);
 
 router5.get("/:id", getproduct);
 router5.put("/:id",upload.single("img"), updateproduct);
