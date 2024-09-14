@@ -108,6 +108,7 @@ export default function Gallery() {
             <h1 className="mb-5">Our Memories</h1>
           </div>
           <div className="row g-2">
+          {gallery.map((gallery) => (
             <div
               className="col-md-6 col-lg-4 wow fadeInUp"
               data-wow-delay="0.3s"
@@ -118,17 +119,23 @@ export default function Gallery() {
               }}
             >
               <div className="service-item p-4">
+                
                 <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service} alt="" />
+                  
+                  <img className="img-fluid"   src={`http://localhost:8080/uploads/${gallery.img}`} alt="" />
                 </div>
-                <h4 className="mb-3">Air Freight</h4>
+               
+                <h4 className="mb-3">{gallery.title}</h4>
 
                 <a className="btn-slide mt-2" href>
                   <i className="fa fa-arrow-right" />
-                  <span>View</span>
+                  <span>
+                  <Link to={`/Viewgallery/` + gallery.id}>View</Link></span>
                 </a>
               </div>
+            
             </div>
+          ))}
             <div
               className="col-md-6 col-lg-4 wow fadeInUp"
               data-wow-delay="0.5s"

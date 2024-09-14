@@ -1,7 +1,24 @@
 import React from "react";
-import about from "./img/about.jpg";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Viewgallery() {
+    const [gallery, setgallery] = useState([]);
+    const location = useLocation();
+    const id = location.pathname.split("/")[2]
+    ? location.pathname.split("/")[2]
+    : "";
+  
+    useEffect(() => {
+      getgallery();
+    }, []);
+    const getgallery = async () => {
+        const res = await axios.get("http://localhost:8080/see/gallery/" + id);
+        setgallery(res.data);
+        console.log(res.data);
+      };
+  
   return (
     <div>
       <div
@@ -34,7 +51,7 @@ export default function Viewgallery() {
                 <center>
                 <img
                   className="position-absolute img-fluid w-100 h-100"
-                  src={about}
+                  src={`http://localhost:8080/uploads/${gallery.img}`}
                   style={{
                     objectFit: "cover",
                     height: "500px",
@@ -42,8 +59,22 @@ export default function Viewgallery() {
                     alignContent: "center",
                     alignItems: "center",
                    
-
-
+                    borderRadius: "10px",
+                    overflow: "hidden",
+                    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+                    transition: "0.3s",
+                    cursor: "pointer",
+                    transform: "scale(1.0)",
+                    filter: "brightness(100%)",
+                    filter: "contrast(100%)",
+                    filter: "grayscale(0%)",
+                    filter: "hue-rotate(0deg)",
+                    filter: "invert(0%)",
+                    filter: "opacity(100%)",
+                    filter: "saturate(100%)",
+                    filter: "sepia(0%)",
+                    filter: "blur(0px)",
+                   
                   }}
                   alt=""
                 /></center>
