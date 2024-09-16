@@ -130,7 +130,7 @@ export default function Products() {
                           className="btn btn-xs btn-primary edit_gallery"
                           type="button"
                         >
-                          <Link to={`/Add_products/` + products.id}>
+                          <Link to={`/Add_product/` + products.id}>
                             Edit
                           </Link>
                         </button>{" "}

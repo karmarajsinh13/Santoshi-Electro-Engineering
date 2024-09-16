@@ -1,7 +1,46 @@
 import React from 'react'
 import about from "./img/about.jpg";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 
 export default function View_product() {
+  const [products, setproducts] = useState([]);
+  const [name, setName] = useState("");
+  const [Totalinvite, setTotalinvite] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const id = location.pathname.split("/")[2]
+    ? location.pathname.split("/")[2]
+    : "";
+
+  useEffect(() => {
+    if (id) {
+      getproducts();
+    }
+  }, []);
+
+
+  const getproducts = async () => {
+    const res = await axios.get(
+      "http://localhost:8080/see/products/" + id
+    );
+    setproducts(res.data);
+
+    console.log(res.data);
+  };
+  const deleteproducts = async (id) => {
+    let ans = window.confirm("are you sure?");
+    if (ans) {
+      const res = await axios.delete(
+        "http://localhost:8080/see/products/" + id
+      );
+      console.log(res.data);
+      alert(res.data);
+      getproducts();
+    }
+  };
   return (
     <div>
       <div
@@ -64,7 +103,7 @@ export default function View_product() {
               <div className="position-relative h-100">
                 <img
                   className="position-absolute img-fluid w-100 h-100"
-                  src={about}
+                  src={`http://localhost:8080/uploads/${products.img}`}
                   style={{ objectFit: "cover" }}
                   alt=""
                 />
@@ -79,14 +118,12 @@ export default function View_product() {
                 animationName: "fadeInUp",
               }}
             >
-              <h6 className="text-secondary text-uppercase mb-3">About Us</h6>
-              <h1 className="mb-5">Quick Transport and Logistics Solutions</h1>
+              <h6 className="text-secondary text-uppercase mb-3">Product Details</h6>
+              <h1 className="mb-5">{products.name}</h1>
               <p className="mb-5">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+              <div contentEditable='false' dangerouslySetInnerHTML={{ __html: products.details }} ></div>
               </p>
-              <div className="row g-4 mb-5">
+              {/* <div className="row g-4 mb-5">
                 <div
                   className="col-sm-6 wow fadeIn"
                   data-wow-delay="0.5s"
@@ -119,7 +156,7 @@ export default function View_product() {
                     lorem diam justo.
                   </p>
                 </div>
-              </div>
+              </div> */}
               <a href className="btn btn-primary py-3 px-5">
                 Explore More
               </a>

@@ -1,4 +1,7 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import service from "./img/service-1.jpg"
 import service2 from "./img/service-2.jpg"
 import service3 from "./img/service-3.jpg"
@@ -7,10 +10,33 @@ import service5 from "./img/service-5.jpg"
 import service6 from "./img/service-6.jpg"
 import carousel1 from "./img/carousel-1.jpg"
 import banner from "./img/banner.jpg"
-import { Link } from 'react-router-dom'
+
 
 
 export default function Products() {
+  const [products, setproducts] = useState([]);
+
+  useEffect(() => {
+    getproducts();
+  }, []);
+
+  const getproducts = async () => {
+    const res = await axios.get("http://localhost:8080/see/products");
+    setproducts(res.data);
+
+    console.log(res.data);
+  };
+  const deleteproducts = async (id) => {
+    let ans = window.confirm("are you sure?");
+    if (ans) {
+      const res = await axios.delete(
+        "http://localhost:8080/see/products/" + id
+      );
+      console.log(res.data);
+      alert(res.data);
+      getproducts();
+    }
+  };
   return (
     <div>
     {/* Spinner Start */}
@@ -42,70 +68,26 @@ export default function Products() {
             <h6 className="text-secondary text-uppercase">Our Services</h6>
             <h1 className="mb-5">Explore Our Products</h1>
           </div>
+        
           <div className="row g-4">
+          {products.map((products) => (
             <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s" style={{visibility: 'visible', animationDelay: '0.3s', animationName: 'fadeInUp'}}>
               <div className="service-item p-4">
                 <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service} alt="" />
+                  <img className="img-fluid"   src={`http://localhost:8080/uploads/${products.img}`} alt="" />
                 </div>
-                <h4 className="mb-3">Air Freight</h4>
+                <h4 className="mb-3">{products.name}</h4>
                 <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
                 <a className="btn-slide mt-2" href><i className="fa fa-arrow-right" /><span>Read More</span></a>
               </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service2} alt="" />
-                </div>
-                <h4 className="mb-3">Ocean Freight</h4>
-                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                <a className="btn-slide mt-2" href><i className="fa fa-arrow-right" /><span>Read More</span></a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s" style={{visibility: 'visible', animationDelay: '0.7s', animationName: 'fadeInUp'}}>
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service3} alt="" />
-                </div>
-                <h4 className="mb-3">Road Freight</h4>
-                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                <a className="btn-slide mt-2" href><i className="fa fa-arrow-right" /><span><Link to="/View_product">Read More</Link></span></a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s" style={{visibility: 'visible', animationDelay: '0.3s', animationName: 'fadeInUp'}}>
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service4} alt="" />
-                </div>
-                <h4 className="mb-3">Train Freight</h4>
-                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                <a className="btn-slide mt-2" href><i className="fa fa-arrow-right" /><span>Read More</span></a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeInUp'}}>
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service5} alt="" />
-                </div>
-                <h4 className="mb-3">Customs Clearance</h4>
-                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                <a className="btn-slide mt-2" href><i className="fa fa-arrow-right" /><span>Read More</span></a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s" style={{visibility: 'visible', animationDelay: '0.7s', animationName: 'fadeInUp'}}>
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid" src={service6} alt="" />
-                </div>
-                <h4 className="mb-3">Warehouse Solutions</h4>
-                <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                <a className="btn-slide mt-2" href><i className="fa fa-arrow-right" /><span>Read More</span></a>
-              </div>
-            </div>
+            </div>   ))}
+           
           </div>
+        
         </div>
+        
       </div>
+      
     {/* Service End */}
     {/* Testimonial Start */}
     <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" style={{visibility: 'hidden', animationDelay: '0.1s', animationName: 'none'}}>

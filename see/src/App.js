@@ -39,6 +39,9 @@ function App() {
         },  {
           path: "/View_product",
           element: <View_product></View_product>,
+        },{
+          path: "/View_product/:id",
+          element: <View_product></View_product>,
         }, {
           path: "/Contactus",
           element: <Contactus></Contactus>,
