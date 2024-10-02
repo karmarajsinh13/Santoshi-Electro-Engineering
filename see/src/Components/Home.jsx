@@ -86,9 +86,7 @@ export default function Home() {
                             Solution
                           </h1>
                           <p className="fs-5 fw-medium text-white mb-4 pb-2">
-                            Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet sit diam no. Kasd rebum ipsum et diam justo
-                            clita et kasd rebum sea elitr.
+                            CNC,PLC,SPM,Machine Control Panel Builelding.
                           </p>
                           <a
                             href
@@ -127,9 +125,7 @@ export default function Home() {
                             Solution
                           </h1>
                           <p className="fs-5 fw-medium text-white mb-4 pb-2">
-                            Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet sit diam no. Kasd rebum ipsum et diam justo
-                            clita et kasd rebum sea elitr.
+                            CNC,PLC,SPM,Machine Control Panel Builelding.
                           </p>
                           <a
                             href
@@ -168,11 +164,9 @@ export default function Home() {
                             Solution
                           </h1>
                           <p className="fs-5 fw-medium text-white mb-4 pb-2">
-                            Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet sit diam no. Kasd rebum ipsum et diam justo
-                            clita et kasd rebum sea elitr.
+                            CNC,PLC,SPM,Machine Control Panel Builelding.
                           </p>
-                          <a
+                          {/* <a
                             href
                             className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
                           >
@@ -183,130 +177,7 @@ export default function Home() {
                             className="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
                           >
                             Free Quote
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="owl-item" style={{ width: "1519.2px" }}>
-                <div className="owl-carousel-item position-relative">
-                  <img className="img-fluid" src="img/carousel-2.jpg" alt="" />
-                  <div
-                    className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style={{ background: "rgba(6, 3, 21, .5)" }}
-                  >
-                    <div className="container">
-                      <div className="row justify-content-start">
-                        <div className="col-10 col-lg-8">
-                          <h5 className="text-white text-uppercase mb-3 animated slideInDown">
-                            Transport &amp; Logistics Solution
-                          </h5>
-                          <h1 className="display-3 text-white animated slideInDown mb-4">
-                            #1 Place For Your{" "}
-                            <span className="text-primary">Transport</span>{" "}
-                            Solution
-                          </h1>
-                          <p className="fs-5 fw-medium text-white mb-4 pb-2">
-                            Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet sit diam no. Kasd rebum ipsum et diam justo
-                            clita et kasd rebum sea elitr.
-                          </p>
-                          <a
-                            href
-                            className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                          >
-                            Read More
-                          </a>
-                          <a
-                            href
-                            className="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
-                          >
-                            Free Quote
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="owl-item cloned" style={{ width: "1519.2px" }}>
-                <div className="owl-carousel-item position-relative">
-                  <img className="img-fluid" src={bg2banner} alt="" />
-                  <div
-                    className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style={{ background: "rgba(6, 3, 21, .5)" }}
-                  >
-                    <div className="container">
-                      <div className="row justify-content-start">
-                        <div className="col-10 col-lg-8">
-                          <h5 className="text-white text-uppercase mb-3 animated slideInDown">
-                            SANTOSHI ELECTRO. &amp; ENGINEERING
-                          </h5>
-                          <h1 className="display-3 text-white animated slideInDown mb-4">
-                            #1 Place For Your{" "}
-                            <span className="text-primary">Logistics</span>{" "}
-                            Solution
-                          </h1>
-                          <p className="fs-5 fw-medium text-white mb-4 pb-2">
-                            Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet sit diam no. Kasd rebum ipsum et diam justo
-                            clita et kasd rebum sea elitr.
-                          </p>
-                          <a
-                            href
-                            className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                          >
-                            Read More
-                          </a>
-                          <a
-                            href
-                            className="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
-                          >
-                            Free Quote
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="owl-item cloned" style={{ width: "1519.2px" }}>
-                <div className="owl-carousel-item position-relative">
-                  <img className="img-fluid" src="img/carousel-2.jpg" alt="" />
-                  <div
-                    className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style={{ background: "rgba(6, 3, 21, .5)" }}
-                  >
-                    <div className="container">
-                      <div className="row justify-content-start">
-                        <div className="col-10 col-lg-8">
-                          <h5 className="text-white text-uppercase mb-3 animated slideInDown">
-                            Transport &amp; Logistics Solution
-                          </h5>
-                          <h1 className="display-3 text-white animated slideInDown mb-4">
-                            #1 Place For Your{" "}
-                            <span className="text-primary">Transport</span>{" "}
-                            Solution
-                          </h1>
-                          <p className="fs-5 fw-medium text-white mb-4 pb-2">
-                            Vero elitr justo clita lorem. Ipsum dolor at sed
-                            stet sit diam no. Kasd rebum ipsum et diam justo
-                            clita et kasd rebum sea elitr.
-                          </p>
-                          <a
-                            href
-                            className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                          >
-                            Read More
-                          </a>
-                          <a
-                            href
-                            className="btn btn-secondary py-md-3 px-md-5 animated slideInRight"
-                          >
-                            Free Quote
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </div>
@@ -315,14 +186,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="owl-nav">
+          {/* <div className="owl-nav">
             <div className="owl-prev">
               <i className="bi bi-chevron-left" />
             </div>
             <div className="owl-next">
               <i className="bi bi-chevron-right" />
             </div>
-          </div>
+          </div> */}
           <div className="owl-dots disabled" />
         </div>
       </div>
@@ -342,33 +213,38 @@ export default function Home() {
             <h1 className="mb-5">Explore Our Products</h1>
           </div>
           <div className="row g-4">
-          {products.map((products) => (
-            <div
-              className="col-md-6 col-lg-4 wow fadeInUp"
-              data-wow-delay="0.3s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.3s",
-                animationName: "fadeInUp",
-              }}
-            >
-              <div className="service-item p-4">
-                <div className="overflow-hidden mb-4">
-                  <img className="img-fluid"  src={`http://localhost:8080/uploads/${products.img}`} alt="" />
+            {products.map((products) => (
+              <div
+                className="col-md-6 col-lg-4 wow fadeInUp"
+                data-wow-delay="0.3s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.3s",
+                  animationName: "fadeInUp",
+                }}
+              >
+                <div className="service-item p-4">
+                  <div className="overflow-hidden mb-4">
+                    <img
+                      className="img-fluid"
+                      src={`http://localhost:8080/uploads/${products.img}`}
+                      alt=""
+                    />
+                  </div>
+                  <h4 className="mb-3">{products.name}</h4>
+                  <p>
+                    Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
+                    lorem diam.
+                  </p>
+                  <a className="btn-slide mt-2" href>
+                    <i className="fa fa-arrow-right" />
+                    <span>
+                      <Link to={`/View_product/` + products.id}>Read More</Link>
+                    </span>
+                  </a>
                 </div>
-                <h4 className="mb-3">{products.name}</h4>
-                <p>
-                  Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
-                  lorem diam.
-                </p>
-                <a className="btn-slide mt-2" href>
-                  <i className="fa fa-arrow-right" />
-                  <span>
-                  <Link to={`/View_product/` + products.id}>Read More</Link></span>
-                </a>
               </div>
-            </div>   
-           ))}
+            ))}
           </div>
         </div>
       </div>

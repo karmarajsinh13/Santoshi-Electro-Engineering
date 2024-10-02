@@ -136,7 +136,7 @@ export default function Gallery() {
             
             </div>
           ))}
-            <div
+            {/* <div
               className="col-md-6 col-lg-4 wow fadeInUp"
               data-wow-delay="0.5s"
               style={{
@@ -179,7 +179,7 @@ export default function Gallery() {
                   </span>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

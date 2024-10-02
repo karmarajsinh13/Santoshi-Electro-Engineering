@@ -41,7 +41,7 @@ export default function Header() {
             <Link to="/Contactus" className="nav-item nav-link">
               Contact Us
             </Link>
-            <div className="nav-item dropdown">
+            {/* <div className="nav-item dropdown">
               <a
                 href="#"
                 className="nav-link dropdown-toggle"
@@ -69,7 +69,7 @@ export default function Header() {
                   404 Page
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* <h4 className="m-0 pe-lg-5 d-none d-lg-block">
             <i className="fa fa-headphones text-primary me-3" />
