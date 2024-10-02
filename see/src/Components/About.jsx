@@ -1,5 +1,7 @@
 import React from "react";
 import about from "./img/about.jpg";
+import see from "./img/logo.png";
+import Team1 from "./img/Team1.jpeg";
 
 export default function About() {
   return (
@@ -17,10 +19,7 @@ export default function About() {
         </div>
       </div>
 
-      <div
-        className="container-fluid page-header py-5"
-       
-      >
+      <div className="container-fluid page-header py-5">
         <div className="container py-10">
           <h1 className="display-3 text-white mb-3 animated slideInDown">
             About Us
@@ -48,8 +47,40 @@ export default function About() {
         </div>
       </div>
 
+      {/* About Start */}
+
       <div className="container-fluid overflow-hidden py-5 px-lg-0">
         <div className="container about py-5 px-lg-0">
+          <img
+            style={{
+              marginRight: "40px",
+              marginLeft: "40px",
+              height: "60px",
+              width: "500px",
+            }}
+            src={see}
+            className="img-fluid"
+            alt="SEE"
+          />
+
+          <p
+            className="mb-5 mt-2"
+            style={{
+              textAlign: "justify",
+              marginRight: "40px",
+              marginLeft: "40px",
+              fontFamily: "Times New Roman",
+              fontSize: "20px",
+              color: "#6f6f6f",
+              lineHeight: "1.5",
+              letterSpacing: "1px",
+            }}
+          >
+            We believe that best service always gives setisfaction to clients.
+            Our goal is to make our technological knowledge and service batter
+            day by day. Satisfied Clients imrove our quality and economical
+            standard in industries.
+          </p>
           <div className="row g-5 mx-lg-0">
             <div
               className="col-lg-6 ps-lg-0 wow fadeInLeft"
@@ -64,7 +95,7 @@ export default function About() {
               <div className="position-relative h-100">
                 <img
                   className="position-absolute img-fluid w-100 h-100"
-                  src={about}
+                  src={Team1}
                   style={{ objectFit: "cover" }}
                   alt=""
                 />
@@ -80,13 +111,33 @@ export default function About() {
               }}
             >
               <h6 className="text-secondary text-uppercase mb-3">About Us</h6>
-              <h1 className="mb-5">Quick Transport and Logistics Solutions</h1>
-              <p className="mb-5">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+              <h1 className="mb-5">Our Quality</h1>
+              <p
+                className="mb-5"
+                style={{
+                  textAlign: "justify",
+                  fontFamily: "Times New Roman",
+                  fontSize: "20px",
+                  color: "#6f6f6f",
+                  lineHeight: "1.5",
+                  letterSpacing: "1px",
+                }}
+              >
+                In order to manufacture these products, our experts utilize
+                supreme quality raw material and advanced technology to make
+                certain that products offered by us are perfect in all aspects.
+                Offered conveyor machines are known for features like high
+                performance, sturdy construction, easy maintenance, simple
+                operation and longer service life. Apart from machines, offered
+                accessories, tank, belt and spring is highly appreciated for
+                robustness, dimensional accuracy, corrosion resistance and high
+                strength.
+                <br></br> <br></br>
+                As per the precise necessities of our respected clients, we
+                offer these products in different specifications and also can be
+                customized according to the information provided by them.
               </p>
-              <div className="row g-4 mb-5">
+              {/* <div className="row g-4 mb-5">
                 <div
                   className="col-sm-6 wow fadeIn"
                   data-wow-delay="0.5s"
@@ -122,12 +173,12 @@ export default function About() {
               </div>
               <a href className="btn btn-primary py-3 px-5">
                 Explore More
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
       </div>
-
+      {/* 
       <div className="container-xxl py-5">
         <div className="container py-5">
           <div className="row g-5">
@@ -569,7 +620,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <a
         href="#"

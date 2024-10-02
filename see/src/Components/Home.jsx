@@ -9,6 +9,7 @@ import service4 from "./img/service-4.jpg";
 import service5 from "./img/service-5.jpg";
 import service6 from "./img/service-6.jpg";
 import bg2banner from "./img/bg2banner.jpg";
+import Team1 from "./img/Team1.jpeg";
 
 export default function Home() {
   const [products, setproducts] = useState([]);

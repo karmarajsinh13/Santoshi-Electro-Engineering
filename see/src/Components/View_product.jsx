@@ -62,7 +62,7 @@ export default function View_product() {
       >
         <div className="container py-5">
           <h1 className="display-3 text-white mb-3 animated slideInDown">
-           {"product_name"}
+          {products.name}
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb">
@@ -157,15 +157,15 @@ export default function View_product() {
                   </p>
                 </div>
               </div> */}
-              <a href className="btn btn-primary py-3 px-5">
+              {/* <a href className="btn btn-primary py-3 px-5">
                 Explore More
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="container-xxl py-5">
+      {/* <div className="container-xxl py-5">
         <div className="container py-5">
           <div className="row g-5">
             <div
@@ -486,7 +486,7 @@ export default function View_product() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="container-fluid bg-dark text-light footer pt-5 wow fadeIn"
@@ -504,15 +504,15 @@ export default function View_product() {
               <h4 className="text-light mb-4">Address</h4>
               <p className="mb-2">
                 <i className="fa fa-map-marker-alt me-3" />
-                123 Street, New York, USA
+                123 Street, Rajkot, Gujarat
               </p>
               <p className="mb-2">
                 <i className="fa fa-phone-alt me-3" />
-                +012 345 67890
+                +91 999 999 9999
               </p>
               <p className="mb-2">
                 <i className="fa fa-envelope me-3" />
-                info@example.com
+                info@see.com
               </p>
               <div className="d-flex pt-2">
                 <a className="btn btn-outline-light btn-social" href>
