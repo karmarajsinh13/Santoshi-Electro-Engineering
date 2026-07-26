@@ -466,8 +466,8 @@ const Home = () => {
             </p>
             <ul className="space-y-3 md:space-y-4">
               {[
-                "14+ Years of combined experience",
-                "398+ Successful projects delivered",
+                "15+ Years of combined experience",
+                "415+ Successful projects delivered",
                 // "24/7 Support and maintenance",
                 "Custom solutions for every need",
               ].map((item, index) => (
